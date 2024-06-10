@@ -24,4 +24,5 @@ class BasicAuth(Auth):
         Otherwise, return the value after Basic (after the space)
         """
         if authorization_header and type(authorization_header) is str:
-            b64 = authorization_header.split()
+            b64 = authorization_header.split(' ')
+            if b64[0] == ''
