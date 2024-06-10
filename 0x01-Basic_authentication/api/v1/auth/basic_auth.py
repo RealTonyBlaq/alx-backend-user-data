@@ -106,4 +106,3 @@ class BasicAuth(Auth):
         You must use user_object_from_credentials
         """
         
-    
