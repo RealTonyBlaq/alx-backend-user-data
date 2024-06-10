@@ -9,7 +9,13 @@ class Auth:
     """ Defining the class Auth """
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
-        """ Requires authentication for the path """
+        """
+        Requires authentication for the path
+        
+        Returns True if path is None
+        Returns True if excluded_paths is None or empty
+        Returns False if path is in excluded_paths
+        """
         if path and excluded_paths and excluded_paths != []:
             if path[-1] != '/':
                 path = path + '/'
@@ -21,7 +27,7 @@ class Auth:
         """ Retrieves auth from the Header """
         if request:
             header = request.headers.get('Authorization')
-            return header if header else None
+            return header
         return None
 
     def current_user(self, request=None) -> TypeVar('User'):
