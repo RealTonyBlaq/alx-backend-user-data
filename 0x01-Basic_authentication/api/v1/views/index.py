@@ -27,4 +27,5 @@ def stats() -> str:
 
 
 @app_views.route('/unauthorized', strict_slashes=False)
-def unauth() -> str
+def unauth() -> str:
+    """ Route for testing unauthorized HTTP Error """
