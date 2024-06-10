@@ -105,4 +105,5 @@ class BasicAuth(Auth):
         You must use extract_user_credentials
         You must use user_object_from_credentials
         """
+        
     
