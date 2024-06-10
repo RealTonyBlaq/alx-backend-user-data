@@ -2,7 +2,7 @@
 """ Basic Authentication Model """
 
 from api.v1.auth.auth import Auth
-from base64 import b64decode, err
+from base64 import b64decode
 
 
 class BasicAuth(Auth):
@@ -38,5 +38,5 @@ class BasicAuth(Auth):
         """
         if base64_authorization_header and type(base64_authorization_header) is str:
             try:
-                decoded = base64.b64decode(bytes(base64_authorization_header))
+                decoded = b64decode(bytes(base64_authorization_header))
             except 
