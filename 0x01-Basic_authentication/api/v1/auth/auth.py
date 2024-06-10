@@ -37,4 +37,6 @@ class Auth:
 
 class BasicAuth(Auth):
     """ Defining an empty BasicAuth class """
-    pass
+
+    def __init__(self) -> None:
+        super().__init__()
