@@ -87,3 +87,4 @@ class BasicAuth(Auth):
             users = User.search({"email": user_email})
             if users != []:
                 user = users[0]
+                if user.is_
