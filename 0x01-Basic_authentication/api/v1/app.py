@@ -20,7 +20,9 @@ if auth:
 
 
 @app.before_request
-def before_req
+def before_request():
+    """ Executed before all other functions """
+    
 
 
 @app.errorhandler(404)
