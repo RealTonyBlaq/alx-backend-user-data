@@ -36,4 +36,6 @@ class BasicAuth(Auth):
         Return None if base64_authorization_header is not a string
         Return None if base64_authorization_header is not a valid Base64
         """
-        if base64_authorization_header and type()
+        if base64_authorization_header and type(base64_authorization_header) is str:
+            try:
+                decoded = ba
