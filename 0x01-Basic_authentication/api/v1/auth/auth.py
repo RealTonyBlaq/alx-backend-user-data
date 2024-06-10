@@ -13,4 +13,5 @@ class Auth:
         pass
 
     def authorization_header(self, request=None) -> str:
-        """ """
+        """ Retrieves auth from the Header """
+        return None
