@@ -22,7 +22,8 @@ if auth:
 @app.before_request
 def before_request():
     """ Executed before all other functions """
-    if 
+    if auth is not None:
+        
 
 
 @app.errorhandler(404)
