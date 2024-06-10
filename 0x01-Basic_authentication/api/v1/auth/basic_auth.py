@@ -76,4 +76,4 @@ class BasicAuth(Auth):
         Return None if user_pwd is not the password of the User instance found - you must use the method is_valid_password of User
         Otherwise, return the User instance
         """
-        if all([user_email, typ])
+        if all([user_email, type(user_email) is str, user_pwd, user_pwd])
