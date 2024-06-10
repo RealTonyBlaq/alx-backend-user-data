@@ -23,7 +23,7 @@ if auth:
 def before_request():
     """ Executed before all other functions """
     if auth is not None:
-        if auth
+        if auth.require_auth(request.path, )
 
 
 @app.errorhandler(404)
