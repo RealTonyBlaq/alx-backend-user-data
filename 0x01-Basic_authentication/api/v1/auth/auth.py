@@ -36,7 +36,7 @@ class Auth:
 
 
 class BasicAuth(Auth):
-    """ Defining an empty BasicAuth class """
+    """ Defining an empty BasicAuth class. """
 
     def __init__(self) -> None:
         """ Inintializes the parent class Auth """
