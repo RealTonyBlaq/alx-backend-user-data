@@ -94,3 +94,6 @@ class BasicAuth(Auth):
             except Exception:
                 pass
         return None
+
+    def current_user(self, request=None) -> TypeVar('User'):
+        """ """
