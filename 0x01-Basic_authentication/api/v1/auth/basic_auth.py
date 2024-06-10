@@ -50,9 +50,11 @@ class BasicAuth(Auth):
     def extract_user_credentials(
           self, decoded_base64_authorization_header: str) -> (str, str):
         """
-        This method must return 2 values
+        This method returns 2 values:
+
         Return None, None if decoded_base64_authorization_header is None
         Return None, None if decoded_base64_authorization_header is not a string
         Return None, None if decoded_base64_authorization_header doesn't contain ':'
-        Otherwise, return the user email and the user password - these 2 values must be separated by a :
+
+        Otherwise, return the user email and the user password
         """
