@@ -38,4 +38,5 @@ class BasicAuth(Auth):
         """
         if base64_authorization_header and type(base64_authorization_header) is str:
             try:
-                decoded = base64.b64decode(bytes(base64_authorization_header)
+                decoded = base64.b64decode(bytes(base64_authorization_header))
+            except 
