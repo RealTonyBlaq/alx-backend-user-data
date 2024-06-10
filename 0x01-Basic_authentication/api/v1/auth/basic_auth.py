@@ -106,4 +106,5 @@ class BasicAuth(Auth):
         You must use user_object_from_credentials
         """
         header = self.authorization_header(request)
+        b64_auth_header = self.extract_base64_authorization_header(header)
         
