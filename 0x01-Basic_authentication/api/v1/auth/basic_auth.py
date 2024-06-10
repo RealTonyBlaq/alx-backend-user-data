@@ -84,4 +84,4 @@ class BasicAuth(Auth):
         Otherwise, return the User instance
         """
         if all([user_email, type(user_email) is str, user_pwd, type(user_pwd) is str]):
-            users = User.search()
+            users = User.search(email=user_email})
