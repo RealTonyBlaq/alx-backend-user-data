@@ -53,14 +53,16 @@ class BasicAuth(Auth):
         This method returns 2 values:
 
         Return None, None if decoded_base64_authorization_header is None
-        Return None, None if decoded_base64_authorization_header is not a string
-        Return None, None if decoded_base64_authorization_header doesn't contain ':'
+        Return None, None if decoded_base64_authorization_header
+            is not a string
+        Return None, None if decoded_base64_authorization_header
+            doesn't contain ':'
 
         Otherwise, return the user email and the user password
         """
         if decoded_base64_authorization_header and type(
               decoded_base64_authorization_header) is str:
             if ':' in decoded_base64_authorization_header:
-                username, password = decoded_base64_authorization_header.split(':')
+                user, password = decoded_base64_authorization_header.split(':')
                 return (username, password)
         return (None, None)
