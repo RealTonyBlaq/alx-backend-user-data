@@ -3,6 +3,7 @@
 
 from api.v1.auth.auth import Auth
 from base64 import b64decode
+import binascii
 
 
 class BasicAuth(Auth):
@@ -39,4 +40,4 @@ class BasicAuth(Auth):
         if base64_authorization_header and type(base64_authorization_header) is str:
             try:
                 decoded = b64decode(bytes(base64_authorization_header))
-            except 
+            except binascii.
