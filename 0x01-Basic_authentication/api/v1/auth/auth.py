@@ -37,4 +37,4 @@ class Auth:
 
 class BasicAuth(Auth):
     """ Defining an empty BasicAuth class """
-    
+    pass
