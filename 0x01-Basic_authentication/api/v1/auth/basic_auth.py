@@ -59,3 +59,5 @@ class BasicAuth(Auth):
         Otherwise, return the user email and the user password
         """
         if decoded_base64_authorization_header and type(decoded_base64_authorization_header) is str:
+            if ':' in decoded_base64_authorization_header:
+                username, pass
