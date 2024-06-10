@@ -35,3 +35,4 @@ def unauth() -> str:
 @app_views.route('/forbidden')
 def forbid() -> str:
     """ Tests the 403: Forbidden Status code """
+    abort(403)
