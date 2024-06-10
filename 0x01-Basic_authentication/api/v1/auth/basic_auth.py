@@ -28,3 +28,6 @@ class BasicAuth(Auth):
             if b64[0] == 'Basic':
                 return b64[1]
         return None
+
+    def decode_base64_authorization_header(self, base64_authorization_header: str) -> str:
+        """ """
