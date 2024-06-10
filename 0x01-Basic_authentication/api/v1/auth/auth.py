@@ -19,8 +19,11 @@ class Auth:
 
     def authorization_header(self, request=None) -> str:
         """ Retrieves auth from the Header """
+        if request:
+            header = request.header
         return None
 
     def current_user(self, request=None) -> TypeVar('User'):
         """ Validates a User """
         return None
+
