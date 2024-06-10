@@ -26,7 +26,7 @@ def before_request():
         if auth.require_auth(request.path, ['/api/v1/status/', '/api/v1/unauthorized/', '/api/v1/forbidden/']) is False:
             if not auth.authorization_header(request):
                 abort(401)
-            if 
+            if not auth.current_user
 
 
 @app.errorhandler(404)
