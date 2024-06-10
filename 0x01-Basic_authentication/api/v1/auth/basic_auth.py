@@ -30,4 +30,6 @@ class BasicAuth(Auth):
         return None
 
     def decode_base64_authorization_header(self, base64_authorization_header: str) -> str:
-        """ """
+        """ Return None if base64_authorization_header is None
+Return None if base64_authorization_header is not a string
+Return None if base64_authorization_header is not a valid Base64"""
