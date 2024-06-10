@@ -22,3 +22,4 @@ class BasicAuth(Auth):
         Return None if authorization_header doesn't start by Basic (with a space at the end)
         Otherwise, return the value after Basic (after the space)
         """
+        
