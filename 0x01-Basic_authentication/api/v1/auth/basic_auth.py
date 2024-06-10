@@ -16,7 +16,6 @@ class BasicAuth(Auth):
         Returns the Base64 part of the Authorization
         header for a Basic Authentication
 
-
         Return None if authorization_header is None
         Return None if authorization_header is not a string
         Return None if authorization_header doesn't start by Basic
