@@ -79,7 +79,7 @@ class BasicAuth(Auth):
             the class method search of the User to lookup the list of
             users based on their email. Don't forget to test all cases:
             “what if there is no user in DB?”, etc.
-        Return None if user_pwd is not the password of the User instance found -
+        Return None if user_pwd is not the password of the User instance found-
             you must use the method is_valid_password of User
 
         Otherwise, return the User instance
