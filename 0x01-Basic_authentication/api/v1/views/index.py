@@ -26,4 +26,4 @@ def stats() -> str:
     return jsonify(stats)
 
 
-@app_views
+@app_views.route('/unauthorized')
