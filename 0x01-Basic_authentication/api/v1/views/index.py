@@ -30,3 +30,8 @@ def stats() -> str:
 def unauth() -> str:
     """ Route for testing the Unauthorized HTTP Error """
     abort(401)
+
+
+@app_views.route('/forbidden')
+def forbid() -> str:
+    """ Tests the 403: Forbidden Status code """
