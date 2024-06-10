@@ -16,3 +16,4 @@ class BasicAuth(Auth):
         Returns the Base64 part of the Authorization
         header for a Basic Authentication
         """
+        
