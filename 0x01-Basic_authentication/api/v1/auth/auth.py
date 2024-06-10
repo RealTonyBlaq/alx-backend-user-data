@@ -12,4 +12,5 @@ class Auth:
         """ Requires authentication for the path """
         pass
 
-    def 
+    def authorization_header(self, request=None) -> str:
+        """ """
