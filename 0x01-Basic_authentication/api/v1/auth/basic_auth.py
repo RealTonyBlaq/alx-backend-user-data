@@ -39,7 +39,7 @@ class BasicAuth(Auth):
         Return None if base64_authorization_header is not a valid Base64
         """
         if base64_authorization_header and \
-            type(base64_authorization_header) is str:
+        type(base64_authorization_header) is str:
             try:
                 decoded = b64decode(base64_authorization_header)
                 return decoded.decode('utf-8')
