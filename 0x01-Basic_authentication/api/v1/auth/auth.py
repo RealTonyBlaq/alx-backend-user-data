@@ -33,3 +33,7 @@ class Auth:
     def current_user(self, request=None) -> TypeVar('User'):
         """ Validates a User """
         return None
+
+
+class BasicAuth(Auth):
+    """ Defining an empty """
