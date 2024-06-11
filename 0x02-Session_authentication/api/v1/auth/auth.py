@@ -42,4 +42,4 @@ class Auth:
     def session_cookie(self, request=None):
         """ Returns a cookie value """
         if request:
-            
+            cookie_name = os.getenv()
