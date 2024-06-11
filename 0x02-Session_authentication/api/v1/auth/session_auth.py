@@ -32,3 +32,5 @@ class SessionAuth(Auth):
         if session_id and type(session_id) is str:
             return self.user_id_by_session_id.get(session_id)
         return None
+
+    def current_user(self, request=None) -> :
