@@ -3,6 +3,7 @@
 
 from api.v1.auth.auth import Auth
 import uuid
+from typing import TypeVar
 
 
 class SessionAuth(Auth):
@@ -33,4 +34,4 @@ class SessionAuth(Auth):
             return self.user_id_by_session_id.get(session_id)
         return None
 
-    def current_user(self, request=None) -> :
+    def current_user(self, request=None) -> TypeVar['User':
