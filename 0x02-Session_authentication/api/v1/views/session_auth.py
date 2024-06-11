@@ -23,6 +23,7 @@ def safe_login() -> str:
 
     verified_user = None
     for user in users:
-        if user.is_valid_password:
+        if user.is_valid_password(password):
             verified_user = user
-    if verified_user:  
+    if not verified_user:  
+        
