@@ -36,5 +36,4 @@ class SessionAuth(Auth):
 
     def current_user(self, request=None) -> TypeVar('User'):
         """ Retrieves a current user based on the cookie value """
-        if request:
-            return self.session_cookie()
+        return self.session_cookie(request)
