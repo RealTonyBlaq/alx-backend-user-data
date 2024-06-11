@@ -4,4 +4,6 @@
 from api.v1.views import app_views
 
 
-@app_views.route('/auth_session/login', methods)
+@app_views.route('/auth_session/login', methods=['POST'],
+                 strict_slashes=False)
+def safe_login()
