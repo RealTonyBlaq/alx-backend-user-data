@@ -8,4 +8,5 @@ from flask import abort, request
 @app_views.route('/auth_session/login', methods=['POST'],
                  strict_slashes=False)
 def safe_login() -> str:
-    """ """
+    """ Authenticates a user and assigns a session id to the user_id """
+    
