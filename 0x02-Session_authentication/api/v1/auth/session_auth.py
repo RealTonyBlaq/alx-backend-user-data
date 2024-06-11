@@ -2,6 +2,7 @@
 """ SessionAuth Model """
 
 from api.v1.auth.auth import Auth
+import uuid
 
 
 class SessionAuth(Auth):
