@@ -28,3 +28,4 @@ class SessionAuth(Auth):
         return None
 
     def user_id_for_session_id(self, session_id: str = None) -> str:
+        """ Retrieves the user that """
