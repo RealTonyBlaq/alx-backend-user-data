@@ -19,6 +19,7 @@ def safe_login() -> str:
     try:
         users = User.search({'email': email})
         for user in users:
-            if user.is_valid_password
+            if user.is_valid_password:
+                
     except Exception:
         return jsonify({"error": "no user found for this email"}), 404
