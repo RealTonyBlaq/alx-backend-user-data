@@ -2,8 +2,10 @@
 """ SessionAuth views """
 
 from api.v1.views import app_views
+from flask import abort, request
 
 
 @app_views.route('/auth_session/login', methods=['POST'],
                  strict_slashes=False)
-def safe_login()
+def safe_login() -> str:
+    """ """
