@@ -22,4 +22,5 @@ class SessionAuth(Auth):
             - None if user_id is not a string
         """
         if user_id and type(user_id) is str:
+            session_id = str(uuid.uuid4())
             
