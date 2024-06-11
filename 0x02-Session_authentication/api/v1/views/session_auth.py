@@ -32,4 +32,4 @@ def safe_login() -> str:
     from api.v1.app import auth
     session_id = auth.create_session(verified_user.id)
     sess_name = os.getenv('SESSION_NAME')
-    return make_response(jsonify(verified_user.t))
+    return make_response(jsonify(verified_user.to_json()), request.cookies[])
