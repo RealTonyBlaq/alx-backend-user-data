@@ -18,5 +18,6 @@ def safe_login() -> str:
         return jsonify({"error": "password missing"}), 400
     try:
         users = User.search({'email': email})
+        
     except Exception:
         return jsonify({"error": "no user found for this email"}), 404
