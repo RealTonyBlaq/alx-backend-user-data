@@ -3,7 +3,7 @@
 
 from api.v1.views import app_views
 from flask import abort, request, jsonify
-from m
+from models.user import User
 
 
 @app_views.route('/auth_session/login', methods=['POST'],
@@ -16,4 +16,4 @@ def safe_login() -> str:
         return jsonify({"error": "email missing"}), 400
     if not password or password == '':
         return jsonify({"error": "password missing"}), 400
-    
+    users = 
