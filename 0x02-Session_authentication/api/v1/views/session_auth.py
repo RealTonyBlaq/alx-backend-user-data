@@ -13,4 +13,6 @@ def safe_login() -> str:
     password = request.form.get('password')
     if not email or email == '':
         return jsonify({"error": "email missing"}), 400
-    if not pas
+    if not password or password == '':
+        return jsonify({"error": "password missing"}), 400
+    
