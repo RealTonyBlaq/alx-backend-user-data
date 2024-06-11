@@ -2,7 +2,7 @@
 """ SessionAuth views """
 
 from api.v1.views import app_views
-from flask import abort, request, jsonify
+from flask import abort, request, jsonify, make_response
 from models.user import User
 import os
 
@@ -32,4 +32,4 @@ def safe_login() -> str:
     from api.v1.app import auth
     session_id = auth.create_session(verified_user.id)
     sess_name = os.getenv('SESSION_NAME')
-    request.
+    return make_response()
