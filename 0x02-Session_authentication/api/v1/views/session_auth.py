@@ -29,4 +29,5 @@ def safe_login() -> str:
         return jsonify({"error": "wrong password"}), 401
 
     from api.v1.app import auth
+    f
     session_id = auth.create_session(verified_user.id)
