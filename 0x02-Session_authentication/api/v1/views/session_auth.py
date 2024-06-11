@@ -27,4 +27,5 @@ def safe_login() -> str:
             verified_user = user
     if not verified_user:  
         return jsonify({"error": "wrong password"}), 401
-    
+
+    from api.v1.app import auth
