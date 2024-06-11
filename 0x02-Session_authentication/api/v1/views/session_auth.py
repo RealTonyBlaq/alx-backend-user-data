@@ -11,4 +11,4 @@ def safe_login() -> str:
     """ Authenticates a user and assigns a session id to the user_id """
     email = request.form.get('email')
     password = request.form.get('password')
-    
+    if not email or 
