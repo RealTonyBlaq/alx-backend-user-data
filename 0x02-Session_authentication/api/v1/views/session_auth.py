@@ -4,6 +4,7 @@
 from api.v1.views import app_views
 from flask import abort, request, jsonify
 from models.user import User
+import os
 
 
 @app_views.route('/auth_session/login', methods=['POST'],
@@ -29,5 +30,5 @@ def safe_login() -> str:
         return jsonify({"error": "wrong password"}), 401
 
     from api.v1.app import auth
-    f
     session_id = auth.create_session(verified_user.id)
+    
