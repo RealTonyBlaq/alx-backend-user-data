@@ -26,4 +26,5 @@ def safe_login() -> str:
         if user.is_valid_password(password):
             verified_user = user
     if not verified_user:  
-        return jsonify({"error": "wrong password"}), 
+        return jsonify({"error": "wrong password"}), 401
+    
