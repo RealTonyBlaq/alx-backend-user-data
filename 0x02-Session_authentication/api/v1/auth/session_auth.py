@@ -16,7 +16,9 @@ class SessionAuth(Auth):
         """
         Creates a Session ID for a user_id
 
-        Return: None if user_id is None
-        Return None if user_id is not a string
+        Return:
+            - None if user_id is None
+            - None if user_id is not a string
         """
-        
+        if user_id and type(user_id) is str:
+            
