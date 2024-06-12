@@ -19,6 +19,8 @@ def safe_login() -> str:
         return jsonify({"error": "password missing"}), 400
     try:
         users = User.search({'email': email})
+        if users is None or users == []:
+            return jsonify({"error": "no user found for this email"}), 404
     except Exception:
         return jsonify({"error": "no user found for this email"}), 404
 
@@ -26,11 +28,14 @@ def safe_login() -> str:
     for user in users:
         if user.is_valid_password(password):
             verified_user = user
+            break
     if not verified_user:
         return jsonify({"error": "wrong password"}), 401
 
     from api.v1.app import auth
     session_id = auth.create_session(verified_user.id)
     sess_name = os.getenv('SESSION_NAME')
-    return make_response(jsonify(verified_user.to_json()))\
-        .set_cookie(sess_name, session_id)
+    response = make_response(jsonify(verified_user.to_json()))
+    response.set_cookie(key=sess_name, value=session_id)
+
+    return response
