@@ -30,4 +30,6 @@ class DB:
             self.__session = DBSession()
         return self.__session
 
-    def add_user(self, email: str, password: str) -> TypeVar[]
+    def add_user(self, email: str, password: str) -> TypeVar['User']:
+        """ Saves a User to the database """
+        
