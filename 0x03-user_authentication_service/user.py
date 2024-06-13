@@ -14,5 +14,5 @@ class User:
     id = Column('id', Integer, primary_key=True, nullable=False)
     email = Column('email', String(60), nullable=False)
     hashed_password = Column('hashed_password', String(256), nullable=False)
-    session_id = Column('session_id', String(256), )
-    
+    session_id = Column('session_id', String(256))
+    reset_token = Column('reset_token', )
