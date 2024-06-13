@@ -53,8 +53,8 @@ class DB:
         raise InvalidRequestError('Invalid parameter type. Use keyword args')
 
     def update_user(self, user_id: int, **kwargs):
-        """ Updates a user object in the database """    
-        if user_id and kwargs and type(user_id):
+        """ Updates a user object in the database """
+        if user_id and kwargs and type(user_id) is int:
             try:
                 user = self.find_user_by(id=user_id)
             except NoResultFound:
