@@ -55,4 +55,5 @@ class DB:
     def update_user(self, user_id, **kwargs):
         """ Updates a user object in the database """    
         if user_id and kwargs:
-            user = self.find_user_by()
+            user = self.find_user_by(id=user_id)
+            
