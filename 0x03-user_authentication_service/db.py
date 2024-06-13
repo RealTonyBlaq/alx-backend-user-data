@@ -43,6 +43,7 @@ class DB:
         """ Finds and returns a user object from the database """
         key = next(iter(kwargs))
         if key in ['email', 'id', 'session_id']:
+            text
             user = self._session.query(User).filter(key).first()
             if user:
                 return user
