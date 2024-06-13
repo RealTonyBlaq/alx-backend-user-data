@@ -42,4 +42,4 @@ class DB:
     def find_user_by(self, **kwargs: dict) -> User:
         """ Finds and returns a user object from the database """
         key = next(kwargs)
-        
+        if key not in ['hashed_password']
