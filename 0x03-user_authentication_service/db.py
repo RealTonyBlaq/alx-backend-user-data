@@ -47,4 +47,4 @@ class DB:
             if user:
                 return user
             raise NoResultFound()
-        raise 
+        raise InvalidRequestError()
