@@ -64,4 +64,5 @@ class DB:
                 if hasattr(user, key):
                     setattr(user, key, value)
                 else:
-                    raise ValueError()
+                    raise ValueError(f'User has no attribute named {key}')
+            
