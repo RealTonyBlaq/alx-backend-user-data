@@ -60,4 +60,4 @@ class DB:
             except NoResultFound:
                 return None
 
-        
+            for key, val
