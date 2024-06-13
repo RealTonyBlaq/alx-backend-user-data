@@ -32,7 +32,8 @@ class DB:
 
     def add_user(self, email: str, hashed_password: str) -> TypeVar['User']:
         """ Saves a new User to the database """
-        if all([email, pass])
+        if all([email,
+                hashed_password, type(email) is str, type(hashed_password) is str]):
         new_user = User()
         new_user.email = email
         new_user.hashed_password = hashed_password
