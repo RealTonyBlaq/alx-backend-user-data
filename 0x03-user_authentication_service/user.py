@@ -12,5 +12,6 @@ class User:
     """ Defining the class User """
     __tablename__ = "users"
     id = Column('id', Integer, primary_key=True, nullable=False)
-    email = Column('email', String(60))
+    email = Column('email', String(60), nullable=False)
+    hashed_password = Column('hashed_password', )
     
