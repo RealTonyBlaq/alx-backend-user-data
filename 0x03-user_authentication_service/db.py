@@ -30,7 +30,7 @@ class DB:
             self.__session = DBSession()
         return self.__session
 
-    def add_user(self, email: str, hashed_password: str) -> TypeVar['User']:
+    def add_user(self, email: str, hashed_password: str) -> TypeVar["User"]:
         """ Saves a new User to the database """
         if all([email,
                 hashed_password,
