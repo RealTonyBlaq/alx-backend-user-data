@@ -41,7 +41,7 @@ class DB:
 
     def find_user_by(self, **kwargs: dict) -> User:
         """ Finds and returns a user object from the database """
-        key = next(list(kwargs))
+        key = next(iter(kwargs))
         if key in ['email', 'id', 'session_id']:
             user = self._session.query(User).filter(key=kwargs[key]).first()
             if user:
