@@ -41,10 +41,12 @@ class DB:
 
     def find_user_by(self, **kwargs: dict) -> User:
         """ Finds and returns a user object from the database """
-        key = next(iter(kwargs))
-        if key in ['email', 'id', 'session_id']:
+        if kwargs:
+            for key in kwargs.keys():
+                if key not in User.__table__.columns.keys():
+                    raise InvalidRequestError('Invalid key in kwargs')
             user = self._session.query(User).filter_by(**kwargs).first()
             if user:
                 return user
-            raise NoResultFound()
-        raise InvalidRequestError()
+            raise NoResultFound('No result found with the parameters')
+        raise InvalidRequestError('Invalid parameter type. Use keyword args')
