@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """ User Model """
 
-from sqlalchemy import Column, Integer, String, Table
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 
 Base = declarative_base()
 
 
-class User:
+class User(Base):
     """ Defining the class User """
-    __tab
+    __tablename__ = "users"
     id = Column('id', Integer, primary_key=True, nullable=False)
     email = Column('email', String(60), nullable=False)
     hashed_password = Column('hashed_password', String(256), nullable=False)
