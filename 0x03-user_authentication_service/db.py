@@ -42,5 +42,5 @@ class DB:
     def find_user_by(self, **kwargs: dict) -> User:
         """ Finds and returns a user object from the database """
         key = next(kwargs)
-        if key not in ['hashed_password', 'reset_token']:
+        if key in ['email', 'id', '']:
             user = self._session.query(User).filter(key=kwargs[key]).first()
