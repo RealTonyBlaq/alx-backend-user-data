@@ -65,4 +65,4 @@ class DB:
                     setattr(user, key, value)
                 else:
                     raise ValueError(f'User has no attribute named {key}')
-            
+            self._session.add(user)
