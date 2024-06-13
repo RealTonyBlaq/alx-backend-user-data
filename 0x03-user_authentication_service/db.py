@@ -43,4 +43,4 @@ class DB:
         """ Finds and returns a user object from the database """
         key = next(kwargs)
         if key not in ['hashed_password', 'reset_token']:
-            self._session.
+            self._session.query(User).filter()
