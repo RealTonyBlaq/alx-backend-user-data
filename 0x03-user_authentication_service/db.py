@@ -43,7 +43,7 @@ class DB:
         """ Finds and returns a user object from the database """
         key = next(iter(kwargs))
         if key in ['email', 'id', 'session_id']:
-            user = self._session.query(User).filter({f'{key}': kwargs[key]}).first()
+            user = self._session.query(User).where(f'{}')
             if user:
                 return user
             raise NoResultFound()
