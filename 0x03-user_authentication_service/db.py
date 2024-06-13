@@ -52,4 +52,5 @@ class DB:
             raise NoResultFound('No result found with the parameters')
         raise InvalidRequestError('Invalid parameter type. Use keyword args')
 
-    def update_user()    
+    def update_user(self, user_id, **kwargs):
+        """ """    
