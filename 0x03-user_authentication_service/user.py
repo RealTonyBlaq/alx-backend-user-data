@@ -11,5 +11,6 @@ Base = declarative_base()
 class User:
     """ Defining the class User """
     __tablename__ = "users"
-    id = Column()
+    id = Column('id', Integer, primary_key=True)
+    
     
