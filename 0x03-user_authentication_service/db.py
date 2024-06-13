@@ -38,3 +38,7 @@ class DB:
         self._session.add(new_user)
         self._session.commit()
         return new_user
+
+    def find_user_by(self, **kwargs: dict) -> User:
+        """ Finds and returns a user object from the database """
+        
