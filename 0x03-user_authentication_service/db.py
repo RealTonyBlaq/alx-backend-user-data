@@ -44,7 +44,7 @@ class DB:
         """ Finds and returns a user object from the database """
         if kwargs:
             for key in kwargs.keys():
-                if key not in User.__table__.columns.keys():
+                if key not in ['email', 'id', 'session_id']:
                     raise InvalidRequestError('Invalid key in kwargs')
             user = self._session.query(User).filter_by(**kwargs).first()
             if user:
