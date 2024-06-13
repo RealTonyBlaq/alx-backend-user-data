@@ -46,3 +46,5 @@ class DB:
             user = self._session.query(User).filter(key=kwargs[key]).first()
             if user:
                 return user
+            raise NoResultFound()
+        raise 
