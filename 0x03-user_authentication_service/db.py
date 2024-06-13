@@ -52,7 +52,7 @@ class DB:
             raise NoResultFound('No result found with the parameters')
         raise InvalidRequestError('Invalid parameter type. Use keyword args')
 
-    def update_user(self, user_id, **kwargs):
+    def update_user(self, user_id int, **kwargs):
         """ Updates a user object in the database """    
         if user_id and kwargs:
             try:
@@ -68,4 +68,4 @@ class DB:
             self._session.add(user)
             self._session.commit()
 
-        
+        return None
