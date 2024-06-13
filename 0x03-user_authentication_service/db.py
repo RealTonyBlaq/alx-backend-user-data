@@ -51,3 +51,5 @@ class DB:
                 return user
             raise NoResultFound('No result found with the parameters')
         raise InvalidRequestError('Invalid parameter type. Use keyword args')
+
+    def update_user()    
