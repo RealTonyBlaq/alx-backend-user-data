@@ -2,7 +2,7 @@
 """ DB Module """
 
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base, tex
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
 from sqlalchemy.exc import NoResultFound, InvalidRequestError
@@ -42,6 +42,7 @@ class DB:
     def find_user_by(self, **kwargs: dict) -> User:
         """ Finds and returns a user object from the database """
         key = next(iter(kwargs))
+        key = text(key)
         if key in ['email', 'id', 'session_id']:
             user = self._session.query(User).filter(key).first()
             if user:
