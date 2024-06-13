@@ -53,4 +53,5 @@ class DB:
         raise InvalidRequestError('Invalid parameter type. Use keyword args')
 
     def update_user(self, user_id, **kwargs):
-        """ """    
+        """ Updates a user object in the database """    
+        
