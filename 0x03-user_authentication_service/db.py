@@ -29,4 +29,4 @@ class DB:
             self.__session = DBSession()
         return self.__session
 
-    def add_user(self, )
+    def add_user(self, email: str, password)
