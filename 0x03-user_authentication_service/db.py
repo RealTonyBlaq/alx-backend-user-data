@@ -66,3 +66,6 @@ class DB:
                 else:
                     raise ValueError(f'User has no attribute named {key}')
             self._session.add(user)
+            self._session.commit()
+
+        
