@@ -60,4 +60,5 @@ class DB:
             except NoResultFound:
                 return None
 
-            for key, val
+            for key, value in kwargs.items():
+                if hasattr(user, key)
