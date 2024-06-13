@@ -40,7 +40,7 @@ class DB:
         self._session.commit()
         return new_user
 
-    def find_user_by(self, **kwargs: dict) -> User:
+    def find_user_by(self, **kwargs) -> User:
         """ Finds and returns a user object from the database """
         if kwargs:
             for key in kwargs.keys():
