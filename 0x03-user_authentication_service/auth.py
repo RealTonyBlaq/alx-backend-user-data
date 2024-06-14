@@ -25,4 +25,4 @@ class Auth:
 
     def register_user(email: str, pwd: str) -> User:
         """ Registers a user if the email doesn't exist in the db """
-        if all([])
+        if all([email, pwd, type(email) is str, type(pwd)])
