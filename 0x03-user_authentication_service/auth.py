@@ -3,6 +3,7 @@
 
 from bcrypt import hashpw, gensalt
 from db import DB
+from user import User
 
 
 def _hash_password(password: str) -> bytes:
@@ -23,3 +24,4 @@ class Auth:
         self._db = DB()
 
     def register_user(email: str, pwd: str) -> User:
+        """ """
