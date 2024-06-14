@@ -22,4 +22,4 @@ class Auth:
         """ Initializes the _db attribute """
         self._db = DB()
 
-    
+    register_user
