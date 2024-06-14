@@ -24,7 +24,7 @@ class Auth:
         """ Initializes the _db attribute """
         self._db = DB()
 
-    def register_user(self, email: str, pwd: str) -> TypeVar('User'):
+    def register_user(self, email: str, pwd: str) -> User:
         """ Registers a user if the email doesn't exist in the db. """
         if all([email, pwd, type(email) is str, type(pwd) is str]):
             try:
