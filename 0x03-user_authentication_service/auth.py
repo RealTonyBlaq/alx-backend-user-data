@@ -28,5 +28,7 @@ class Auth:
         """ Registers a user if the email doesn't exist in the db """
         if all([email, pwd, type(email) is str, type(pwd) is str]):
             try:
-                self._db.find_user_by(email=email)
-            except NoResultFound
+                user = self._db.find_user_by(email=email)
+                raise ValueError
+            except NoResultFound:
+                
