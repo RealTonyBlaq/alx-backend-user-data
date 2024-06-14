@@ -29,6 +29,6 @@ class Auth:
         if all([email, pwd, type(email) is str, type(pwd) is str]):
             try:
                 user = self._db.find_user_by(email=email)
-                raise ValueError
+                raise ValueError(f'User {email} already exists')
             except NoResultFound:
                 
