@@ -14,10 +14,12 @@ def _hash_password(password: str) -> bytes:
 
 
 class Auth:
-    """Auth class to interact with the authentication database.
+    """
+    Auth class to interact with the authentication database.
     """
 
     def __init__(self):
-        """ Initializes the """
+        """ Initializes the _db attribute """
         self._db = DB()
 
+    
