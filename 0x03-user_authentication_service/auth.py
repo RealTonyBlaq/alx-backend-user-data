@@ -2,6 +2,7 @@
 """ Password hashing """
 
 from bcrypt import hashpw, gensalt
+from db import DB
 
 
 def _hash_password(password: str) -> bytes:
@@ -17,4 +18,6 @@ class Auth:
     """
 
     def __init__(self):
+        """ Initializes the """
         self._db = DB()
+
