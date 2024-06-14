@@ -3,6 +3,7 @@
 
 from bcrypt import hashpw, gensalt
 from db import DB
+from sqlalchemy.orm.exc import no
 from user import User
 
 
