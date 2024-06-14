@@ -10,3 +10,11 @@ def _hash_password(password: str) -> bytes:
         salt = gensalt()
         password = password.encode('utf-8')
         return hashpw(password, salt)
+
+
+class Auth:
+    """Auth class to interact with the authentication database.
+    """
+
+    def __init__(self):
+        self._db = DB()
