@@ -3,7 +3,7 @@
 
 from bcrypt import hashpw, gensalt
 from db import DB
-from sqlalchemy.exc
+from sqlalchemy.exc import NoResultFound
 from user import User
 
 
@@ -29,4 +29,4 @@ class Auth:
         if all([email, pwd, type(email) is str, type(pwd) is str]):
             try:
                 self._db.find_user_by(email=email)
-            except 
+            except NoResultFound
