@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Basic Flask app """
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from auth import Auth
 
 
@@ -17,7 +17,10 @@ def home() -> str:
 
 @app.route('/users', methods=['POST'], strict_slashes=False)
 def users() -> str:
-    """ Return the users"""
+    """
+    Return the users endpoint response
+    """
+    if request.m
 
 
 if __name__ == "__main__":
