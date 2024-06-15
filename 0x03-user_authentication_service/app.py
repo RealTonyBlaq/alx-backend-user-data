@@ -22,7 +22,7 @@ def users() -> str:
     """
     if request.method == "POST":
         email = request.form.get('email')
-        pwd = request.
+        pwd = request.form.get('password')
 
 
 if __name__ == "__main__":
