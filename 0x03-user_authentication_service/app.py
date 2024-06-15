@@ -23,6 +23,8 @@ def users() -> str:
     if request.method == "POST":
         email = request.form.get('email')
         pwd = request.form.get('password')
+        try:
+            user = AUTH.register_user()
 
 
 if __name__ == "__main__":
