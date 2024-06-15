@@ -25,6 +25,7 @@ def users() -> str:
         pwd = request.form.get('password')
         try:
             user = AUTH.register_user()
+            regist
 
 
 if __name__ == "__main__":
