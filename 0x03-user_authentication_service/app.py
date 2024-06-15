@@ -25,7 +25,8 @@ def users() -> str:
         pwd = request.form.get('password')
         try:
             user = AUTH.register_user()
-            return jsonify({"email": email, "message": "user created"})
+            return jsonify({"email": user.email, "message": "user created"})
+        except ValueError
 
 
 if __name__ == "__main__":
