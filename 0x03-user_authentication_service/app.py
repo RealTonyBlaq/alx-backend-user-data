@@ -20,7 +20,9 @@ def users() -> str:
     """
     Return the users endpoint response
     """
-    if request.m
+    if request.method == "POST":
+        email = request.form.get('email')
+        pwd = request.
 
 
 if __name__ == "__main__":
