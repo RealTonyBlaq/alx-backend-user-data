@@ -6,14 +6,16 @@ from auth import Auth
 
 
 app = Flask(__name__)
-AUTH = Auth(
-    
-)
+AUTH = Auth()
+
 
 @app.route('/', strict_slashes=False)
 def home() -> str:
     """ Returns the home JSON page """
     return jsonify({"message": "Bienvenue"}), 200
+
+
+@app.route()
 
 
 if __name__ == "__main__":
