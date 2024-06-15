@@ -5,7 +5,7 @@ from bcrypt import hashpw, gensalt
 from db import DB
 from sqlalchemy.exc import InvalidRequestError
 from sqlalchemy.orm.exc import NoResultFound
-from user import User
+from typing import TypeVar
 
 
 def _hash_password(password: str) -> bytes:
@@ -25,7 +25,7 @@ class Auth:
         """ Initializes the _db attribute """
         self._db = DB()
 
-    def register_user(self, email: str, pwd: str) -> User:
+    def register_user(self, email: str, pwd: str) -> TypeVar('User'):
         """ Registers a user if the email doesn't exist in the db. """
         try:
             user = self._db.find_user_by(email=email)
