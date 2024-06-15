@@ -15,7 +15,7 @@ def home() -> str:
     return jsonify({"message": "Bienvenue"}), 200
 
 
-@app.route()
+@app.route('/users', methods=['POST'])
 
 
 if __name__ == "__main__":
