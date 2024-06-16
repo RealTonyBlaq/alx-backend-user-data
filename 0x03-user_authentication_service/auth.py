@@ -94,4 +94,5 @@ class Auth:
                 return token
             except (NoResultFound, InvalidRequestError):
                 pass
-        raise ValueError('Invalid request / User {}')
+        raise ValueError('Invalid request / User {} doesnt exist'
+                         .format(email))
