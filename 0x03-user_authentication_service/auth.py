@@ -50,3 +50,5 @@ class Auth:
                 return checkpw(password.encode('utf-8'), user.hashed_password)
             except (InvalidRequestError, NoResultFound):
                 return False
+
+    def create_session(email: str) -> str
