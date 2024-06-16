@@ -31,7 +31,10 @@ def users() -> str:
 
 
 @app.route('/sessions', methods=['POST'])
-def new_session() -
+def new_session() -> str:
+    """
+    create a new session for the user, store it the session ID as a cookie with key "session_id" on the response and return a JSON payload of the form
+    """
 
 
 if __name__ == "__main__":
