@@ -66,3 +66,6 @@ class Auth:
 
     def get_user_from_session_id(self, session_id: str) -> User:
         """ Retrieves a User by their session_id """
+        if session_id and type(session_id) is str:
+            try:
+                user = self._db.
