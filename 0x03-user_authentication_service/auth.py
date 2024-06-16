@@ -74,4 +74,6 @@ class Auth:
                 pass
         return None
 
-    def destroy_session()
+    def destroy_session(user_id: int):
+        """ Destroys a session attached to a user """
+        
