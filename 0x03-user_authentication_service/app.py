@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """ Basic Flask app """
 
-from flask import Flask, jsonify, request
 from auth import Auth
+from flask import Flask, jsonify, request
 
 
 app = Flask(__name__)
@@ -20,14 +20,13 @@ def users() -> str:
     """
     Return the users endpoint response
     """
-    if request.method == "POST":
-        email = request.form.get('email')
-        pwd = request.form.get('password')
-        try:
-            user = AUTH.register_user()
-            return jsonify({"email": user.email, "message": "user created"})
-        except ValueError:
-            return jsonify({"message": "email already registered"}), 400
+    email = request.form.get('email')
+    pwd = request.form.get('password')
+    try:
+        user = AUTH.register_user()
+        return jsonify({"email": user.email, "message": "user created"})
+    except ValueError:
+        return jsonify({"message": "email already registered"}), 400
 
 
 if __name__ == "__main__":
