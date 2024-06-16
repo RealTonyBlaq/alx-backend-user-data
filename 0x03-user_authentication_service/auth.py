@@ -98,4 +98,4 @@ class Auth:
                          .format(email))
 
     def update_password(self, reset_token: str, password: str):
-        """ """
+        """ Updates a User password if it exists """
