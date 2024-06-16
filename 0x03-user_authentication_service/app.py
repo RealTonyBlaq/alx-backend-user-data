@@ -2,7 +2,7 @@
 """ Basic Flask app """
 
 from auth import Auth
-from flask import Flask, jsonify, make_response, request
+from flask import abort, Flask, jsonify, make_response, request
 
 
 app = Flask(__name__)
@@ -45,7 +45,7 @@ def new_session() -> str:
             jsonify({"email": email, "message": "logged in"}), 200)
         response.set_cookie('session_id', session_id)
         return response
-    a
+    abort(401)
 
 
 if __name__ == "__main__":
