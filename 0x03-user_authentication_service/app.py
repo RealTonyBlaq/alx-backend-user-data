@@ -38,16 +38,18 @@ def new_session() -> str:
     as a cookie with key "session_id" on the response and
     return a JSON payload of the form
     """
-    if request.method == ''
-    email = request.form.get('email')
-    password = request.form.get('password')
-    if AUTH.valid_login(email, password):
-        session_id = AUTH.create_session(email)
-        response = make_response(
-            jsonify({"email": email, "message": "logged in"}), 200)
-        response.set_cookie('session_id', session_id)
-        return response
-    abort(401)
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+        if AUTH.valid_login(email, password):
+            session_id = AUTH.create_session(email)
+            response = make_response(
+                jsonify({"email": email, "message": "logged in"}), 200)
+            response.set_cookie('session_id', session_id)
+            return response
+        abort(401)
+    elif request.method == 'DELETE':
+        
 
 
 if __name__ == "__main__":
