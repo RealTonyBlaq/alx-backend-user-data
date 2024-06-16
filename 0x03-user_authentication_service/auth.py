@@ -100,4 +100,4 @@ class Auth:
     def update_password(self, reset_token: str, password: str):
         """ Updates a User password if it exists """
         if reset_token and password:
-            
+            user = self._db.find_user_by()
