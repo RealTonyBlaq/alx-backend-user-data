@@ -57,6 +57,8 @@ def new_session() -> str:
         cookie = request.cookies.get('session_id')
         if cookie:
             user = AUTH.get_user_from_session_id(cookie)
+            if user:
+                AUTH.destroy_session(user.id)
             
 
 
