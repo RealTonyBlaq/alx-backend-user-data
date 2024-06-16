@@ -54,7 +54,7 @@ def new_session() -> str:
             return response
         abort(401)
     elif request.method == 'DELETE':
-        cookie = request.
+        cookie = request.cookies.get('session_id')
 
 
 if __name__ == "__main__":
