@@ -58,4 +58,4 @@ class Auth:
         """
         if email:
             try:
-                
+                user = self._db.
