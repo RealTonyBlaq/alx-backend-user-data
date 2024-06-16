@@ -84,13 +84,14 @@ def reset() -> str:
     If the email is not registered, respond with a 403 status code.
     Otherwise, generate a token and respond with a 200 HTTP status.
     """
-    
-    email = request.form.get('email')
-    try:
-        token = AUTH.get_reset_password_token(email)
-        return jsonify({"email": email, "reset_token": token})
-    except ValueError:
-        abort(403)
+    if request.method == 'POST':
+        email = request.form.get('email')
+        try:
+            token = AUTH.get_reset_password_token(email)
+            return jsonify({"email": email, "reset_token": token})
+        except ValueError:
+            abort(403)
+    elif
 
 
 if __name__ == "__main__":
