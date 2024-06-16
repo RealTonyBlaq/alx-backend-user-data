@@ -102,4 +102,4 @@ class Auth:
         if reset_token and password:
             try:
                 user = self._db.find_user_by(reset_token=reset_token)
-                
+                self._db.update_user(user.id, )
