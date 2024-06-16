@@ -91,7 +91,9 @@ def reset() -> str:
             return jsonify({"email": email, "reset_token": token})
         except ValueError:
             abort(403)
-    elif
+    elif request.method == 'PUT':
+        email = request.form.get('email')
+        hashed_password 
 
 
 if __name__ == "__main__":
