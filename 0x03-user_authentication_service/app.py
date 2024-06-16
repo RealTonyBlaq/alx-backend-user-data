@@ -56,7 +56,8 @@ def new_session() -> str:
     elif request.method == 'DELETE':
         cookie = request.cookies.get('session_id')
         if cookie:
-            user = AUTH.get_user_from_session_id()
+            user = AUTH.get_user_from_session_id(cookie)
+            
 
 
 if __name__ == "__main__":
