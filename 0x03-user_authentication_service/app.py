@@ -41,6 +41,7 @@ def new_session() -> str:
     password = request.form.get('password')
     if AUTH.valid_login(email, password):
         session_id = AUTH.create_session(email)
+        response = make_response(jsonify({"email": email, "message": "logged in"}), 200)
         
 
 
