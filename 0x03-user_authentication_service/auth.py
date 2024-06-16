@@ -41,4 +41,4 @@ class Auth:
         if email and password:
             try:
                 user = self._db.find_user_by(email=email)
-                return user.hashed_password == 
+                return checkpw(password.encode())
