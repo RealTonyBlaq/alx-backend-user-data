@@ -86,8 +86,8 @@ def reset() -> str:
     """
     email = request.form.get('email')
     try:
-        user = AUTH.get_reset_password_token(email)
-        
+        token = AUTH.get_reset_password_token(email)
+        return jsonify({"email": "<user email>", "reset_token": "<reset token>"})
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
