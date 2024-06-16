@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Password hashing """
 
-from bcrypt import hashpw, gensalt
+from bcrypt import checkpw, hashpw, gensalt
 from db import DB
 from sqlalchemy.exc import InvalidRequestError
 from sqlalchemy.orm.exc import NoResultFound
@@ -37,4 +37,4 @@ class Auth:
             raise ValueError('Invalid request type')
 
     def valid_login(self, email: str, password: str) -> bool:
-        """ """
+        """ Validates the login password of the user """
