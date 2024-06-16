@@ -51,4 +51,6 @@ class Auth:
             except (InvalidRequestError, NoResultFound):
                 return False
 
-    def create_session(email: str) -> str
+    def create_session(email: str) -> str:
+        """ Returns the session ID as a string and stores it to
+        """
