@@ -73,3 +73,5 @@ class Auth:
             except (NoResultFound, InvalidRequestError):
                 pass
         return None
+
+    def destroy_session()
