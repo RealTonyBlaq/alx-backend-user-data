@@ -85,7 +85,7 @@ def reset() -> str:
     Otherwise, generate a token and respond with a 200 HTTP status.
     """
     email = request.form.get('email')
-    user = AUTH.get_reset_password_token(email)
+    user = AUTH.
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
