@@ -3,7 +3,7 @@
 
 from auth import Auth
 from flask import (abort, Flask, jsonify, make_response,
-                   request)
+                   redirect, request, url_for)
 
 
 app = Flask(__name__)
@@ -60,6 +60,7 @@ def new_session() -> str:
             user = AUTH.get_user_from_session_id(cookie)
             if user:
                 AUTH.destroy_session(user.id)
+                
             
 
 
