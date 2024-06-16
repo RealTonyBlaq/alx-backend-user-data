@@ -66,7 +66,7 @@ def new_session() -> str:
 
 @app.route('/profile', strict_slashes=False)
 def profile() -> str:
-    """ """
+    """ Returns a JSON payload of the user if it exists """
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
