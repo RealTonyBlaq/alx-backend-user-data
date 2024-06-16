@@ -93,7 +93,8 @@ def reset() -> str:
             abort(403)
     elif request.method == 'PUT':
         email = request.form.get('email')
-        token = request.
+        token = request.form.get('reset_token')
+        em
 
 
 if __name__ == "__main__":
