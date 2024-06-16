@@ -31,6 +31,7 @@ def users() -> str:
 
 
 @app.route('/sessions', methods=['POST'])
+def new_session() -
 
 
 if __name__ == "__main__":
