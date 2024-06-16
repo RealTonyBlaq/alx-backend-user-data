@@ -34,9 +34,13 @@ def users() -> str:
            strict_slashes=False)
 def new_session() -> str:
     """
+    POST /sessions
     create a new session for the user, store it the session ID
     as a cookie with key "session_id" on the response and
     return a JSON payload of the form
+
+    DELETE /sessions
+    
     """
     if request.method == 'POST':
         email = request.form.get('email')
