@@ -94,7 +94,7 @@ def reset() -> str:
     elif request.method == 'PUT':
         email = request.form.get('email')
         token = request.form.get('reset_token')
-        pwd = request.form.get('password')
+        pwd = request.form.get('new_password')
         try:
             AUTH.update_password(token, pwd)
             return jsonify({"email": email, "message": "Password updated"})
