@@ -83,3 +83,6 @@ class Auth:
             except (NoResultFound, InvalidRequestError):
                 pass
         return None
+
+    def get_reset_password_token(email: str) -> str:
+        """ """
