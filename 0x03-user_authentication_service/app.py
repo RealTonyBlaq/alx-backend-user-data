@@ -40,7 +40,8 @@ def new_session() -> str:
     return a JSON payload of the form
 
     DELETE /sessions
-    If the user exists destroy the session and redirect the user to GET /. If the user does not exist, respond with a 403 HTTP status.
+    If the user exists destroy the session and redirect to GET /.
+    If the user does not exist, respond with a 403 HTTP status.
     """
     if request.method == 'POST':
         email = request.form.get('email')
@@ -53,7 +54,7 @@ def new_session() -> str:
             return response
         abort(401)
     elif request.method == 'DELETE':
-        
+        cookie = request.
 
 
 if __name__ == "__main__":
