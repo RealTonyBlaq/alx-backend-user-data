@@ -79,8 +79,7 @@ class Auth:
         if user_id and type(user_id) is int:
             try:
                 user = self._db.find_user_by(id=user_id)
-                self._db.update_user(user_id, session_id=None)
+                self._db.update_user(user.id, session_id=None)
             except (NoResultFound, InvalidRequestError):
                 pass
         return None
-            
