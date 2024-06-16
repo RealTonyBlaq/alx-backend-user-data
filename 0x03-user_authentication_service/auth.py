@@ -76,4 +76,5 @@ class Auth:
 
     def destroy_session(user_id: int):
         """ Destroys a session attached to a user """
-        
+        if user_id and type(user_id) is int:
+            
