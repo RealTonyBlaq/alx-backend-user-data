@@ -77,4 +77,5 @@ class Auth:
     def destroy_session(self, user_id: int):
         """ Destroys a session attached to a user """
         if user_id and type(user_id) is int:
-            user = self._db.
+            user = self._db.find_user_by(id=user_id)
+            
