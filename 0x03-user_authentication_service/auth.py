@@ -86,4 +86,5 @@ class Auth:
 
     def get_reset_password_token(email: str) -> str:
         """ Sets the reset_token attribute for a user and returns it """
-        if email and type(email)
+        if email and type(email) is str:
+            
