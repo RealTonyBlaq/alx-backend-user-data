@@ -64,7 +64,9 @@ def new_session() -> str:
         abort(403)
 
 
-@app.route('/profile', sr)
+@app.route('/profile', strict_slashes=False)
+def profile() -> str:
+    """ """
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
