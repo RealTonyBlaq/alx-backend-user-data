@@ -45,6 +45,7 @@ def new_session() -> str:
             jsonify({"email": email, "message": "logged in"}), 200)
         response.set_cookie('session_id', session_id)
         return response
+    a
 
 
 if __name__ == "__main__":
