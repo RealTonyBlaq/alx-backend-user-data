@@ -84,6 +84,7 @@ def reset() -> str:
     If the email is not registered, respond with a 403 status code.
     Otherwise, generate a token and respond with a 200 HTTP status.
     """
-    
+    email = request.form.get('email')
+    user = 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
