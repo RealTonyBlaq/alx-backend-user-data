@@ -79,11 +79,11 @@ def profile() -> str:
            strict_slashes=False)
 def reset() -> str:
     """
-    POST /reset_password route.
-
-The request is expected to contain form data with the "email" field.
-
-If the email is not registered, respond with a 403 status code. Otherwise, generate a token and respond with a 200 HTTP status and the following JSON payload:
+    POST /reset_password
+    The request is expected to contain form data with the "email" field.
+    If the email is not registered, respond with a 403 status code.
+    Otherwise, generate a token and respond with a 200 HTTP status.
     """
+    
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
