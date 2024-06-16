@@ -93,4 +93,5 @@ class Auth:
                 self._db.update_user(user.id, reset_token=token)
                 return token
             except (NoResultFound, InvalidRequestError):
-                
+                pass
+        raise ValueError()
