@@ -75,6 +75,9 @@ def profile() -> str:
     abort(403)
 
 
-@app.route('/reset_password')
+@app.route('/reset_password', methods=['POST'],
+           strict_slashes=False)
+def reset() -> str:
+    """ Res"""
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
