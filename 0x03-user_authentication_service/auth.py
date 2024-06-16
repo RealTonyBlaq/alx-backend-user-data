@@ -35,3 +35,6 @@ class Auth:
             return self._db.add_user(email, password)
         except InvalidRequestError:
             raise ValueError('Invalid request type')
+
+    def valid_login(self, email: str, password: str) -> bool:
+        """ """
