@@ -97,4 +97,5 @@ class Auth:
         raise ValueError('Invalid request / User {} doesnt exist'
                          .format(email))
 
-    def update_password(self, reset_token:)
+    def update_password(self, reset_token: str, password: str):
+        """ """
