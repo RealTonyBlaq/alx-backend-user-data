@@ -94,4 +94,4 @@ class Auth:
                 return token
             except (NoResultFound, InvalidRequestError):
                 pass
-        raise ValueError()
+        raise ValueError('Invalid request / User {}')
