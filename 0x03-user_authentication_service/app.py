@@ -68,6 +68,8 @@ def new_session() -> str:
 def profile() -> str:
     """ Returns a JSON payload of the user if it exists """
     cookie = request.cookies.get('session_id')
-    
+    if cookie:
+        user = AUTH.get_user_from_session_id(cookie)
+        if user
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
