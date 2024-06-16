@@ -52,5 +52,8 @@ class Auth:
                 return False
 
     def create_session(email: str) -> str:
-        """ Returns the session ID as a string and stores it to
         """
+        Returns the session ID as a string and stores it to
+        the database to the User.session_id attribute
+        """
+        
