@@ -94,9 +94,11 @@ def reset() -> str:
     elif request.method == 'PUT':
         email = request.form.get('email')
         token = request.form.get('reset_token')
-        pwd = request.form.get('passowrd')
+        pwd = request.form.get('password')
         try:
-            AUTH.update_password()
+            AUTH.update_password(token, pwd)
+        except ValueError:
+            abort(403)
 
 
 if __name__ == "__main__":
