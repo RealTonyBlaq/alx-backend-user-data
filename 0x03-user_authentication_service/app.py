@@ -39,7 +39,8 @@ def new_session() -> str:
     """
     email = request.form.get('email')
     password = request.form.get('password')
-    AUTH.
+    if AUTH.valid_login(email, password):
+        
 
 
 if __name__ == "__main__":
