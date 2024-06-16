@@ -38,3 +38,5 @@ class Auth:
 
     def valid_login(self, email: str, password: str) -> bool:
         """ Validates the login password of the user """
+        if email and password:
+            
