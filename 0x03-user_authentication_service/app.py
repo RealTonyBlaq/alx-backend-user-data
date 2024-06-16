@@ -90,6 +90,7 @@ def reset() -> str:
         return jsonify({"email": email, "reset_token": token})
     except ValueError:
         abort(403)
-    
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="5000")
