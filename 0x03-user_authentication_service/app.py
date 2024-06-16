@@ -37,7 +37,9 @@ def new_session() -> str:
     as a cookie with key "session_id" on the response and
     return a JSON payload of the form
     """
-    email = request.form.get
+    email = request.form.get('email')
+    password = request.form.get('password')
+    
 
 
 if __name__ == "__main__":
