@@ -89,4 +89,5 @@ class Auth:
         if email and type(email) is str:
             try:
                 user = self._db.find_user_by(email=email)
-                
+                toe
+                self._db.update_user(user.id, reset_token=)
