@@ -105,4 +105,5 @@ class Auth:
                 password = _hash_password(password)
                 self._db.update_user(user.id, reset_token=None, hashed_password=password)
             except NoResultFound:
-                
+                raise ValueError('User does not exist')
+        return None
