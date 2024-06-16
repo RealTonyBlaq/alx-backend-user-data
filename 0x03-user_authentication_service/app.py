@@ -30,13 +30,15 @@ def users() -> str:
             return jsonify({"message": "email already registered"}), 400
 
 
-@app.route('/sessions', methods=['POST', 'DELETE'])
+@app.route('/sessions', methods=['POST', 'DELETE'],
+           strict_slashes=False)
 def new_session() -> str:
     """
     create a new session for the user, store it the session ID
     as a cookie with key "session_id" on the response and
     return a JSON payload of the form
     """
+    if request.method == ''
     email = request.form.get('email')
     password = request.form.get('password')
     if AUTH.valid_login(email, password):
