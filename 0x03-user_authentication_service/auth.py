@@ -56,7 +56,7 @@ class Auth:
         Returns the session ID as a string and stores it to
         the database to the User.session_id attribute
         """
-        if email:
+        if email and type(email) is str:
             try:
                 user = self._db.find_user_by(email=email)
                 self._db.update_user(user.id, {'session_id': _generate_uuid()})
