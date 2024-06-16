@@ -95,7 +95,8 @@ def reset() -> str:
         email = request.form.get('email')
         token = request.form.get('reset_token')
         pwd = request.form.get('passowrd')
-        
+        try:
+            AUTH.update_password()
 
 
 if __name__ == "__main__":
