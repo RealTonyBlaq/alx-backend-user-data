@@ -68,4 +68,6 @@ class Auth:
         """ Retrieves a User by their session_id """
         if session_id and type(session_id) is str:
             try:
-                user = self._db.
+                user = self._db.find_user_by(session_id=session_id)
+                return user
+            except NoResultFound
