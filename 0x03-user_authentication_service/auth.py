@@ -84,7 +84,9 @@ class Auth:
                 pass
         return None
 
-    def get_reset_password_token(email: str) -> str:
+    def get_reset_password_token(self, email: str) -> str:
         """ Sets the reset_token attribute for a user and returns it """
         if email and type(email) is str:
-            
+            try:
+                user = self._db.find_user_by(email=email)
+                
