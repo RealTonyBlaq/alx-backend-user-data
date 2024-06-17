@@ -49,3 +49,4 @@ def safe_logout() -> str:
     cookie = request.cookies.get(sess_name)
     if cookie:
         from api.v1.app import auth
+        auth.
