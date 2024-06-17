@@ -49,4 +49,6 @@ def safe_logout() -> str:
     cookie = request.cookies.get(sess_name)
     if cookie:
         from api.v1.app import auth
-        if auth.destroy_session(request)
+        if auth.destroy_session(request):
+            return jsonify({}), 200
+    
