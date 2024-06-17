@@ -5,6 +5,9 @@ import requests
 from db import DB
 
 
+db = DB()
+
+
 def register_user(email: str, password: str) -> None:
     """ Tests POST /users endpoint """
     r = requests.post('http://127.0.0.1:5000/users',
@@ -53,7 +56,7 @@ def reset_password_token(email: str) -> str:
     """ Tests POST /reset_password """
     r = requests.post('http://127.0.0.1:5000/reset_password',
                       data={'email': email})
-    user = DB.find_user_by()
+    user = db.find_user_by()
     assert r.json() == {"email": email, "reset_token": token}
 update_password(email: str, reset_token: str, new_password: str) -> None
 
