@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""
-Main file
-"""
+""" Main file """
 from user import User
 
-print(User.__tablename__)
-
-for column in User.__table__.columns:
-    print("{}: {}".format(column, column.type))
+register_user(email: str, password: str) -> None
+log_in_wrong_password(email: str, password: str) -> None
+log_in(email: str, password: str) -> str
+profile_unlogged() -> None
+profile_logged(session_id: str) -> None
+log_out(session_id: str) -> None
+reset_password_token(email: str) -> str
+update_password(email: str, reset_token: str, new_password: str) -> None
