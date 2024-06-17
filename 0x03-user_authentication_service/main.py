@@ -14,7 +14,8 @@ def register_user(email: str, password: str) -> None:
 
 def log_in_wrong_password(email: str, password: str) -> None:
     """ Tests POST /sessions with wrong login details """
-    r = requests.post()
+    r = requests.post('http://127.0.0.1:5000/sessions',
+                      params)
 log_in(email: str, password: str) -> str
 profile_unlogged() -> None
 profile_logged(session_id: str) -> None
