@@ -41,7 +41,7 @@ def profile_logged(session_id: str) -> None:
 
 
 def log_out(session_id: str) -> None:
-    """ """
+    """ Tests """
 reset_password_token(email: str) -> str
 update_password(email: str, reset_token: str, new_password: str) -> None
 
