@@ -30,8 +30,11 @@ def log_in(email: str, password: str) -> str:
 def profile_unlogged() -> None:
     """ Tests GET /profile without a session_id """
     r = requests.get('http://127.0.0.1:5000/profile')
-    assert r.s
-profile_logged(session_id: str) -> None
+    assert r.status_code == 403
+
+
+def profile_logged(session_id: str) -> None:
+    """ Tests GET /profile with a session_id"""
 log_out(session_id: str) -> None
 reset_password_token(email: str) -> str
 update_password(email: str, reset_token: str, new_password: str) -> None
