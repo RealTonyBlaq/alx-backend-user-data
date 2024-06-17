@@ -29,7 +29,7 @@ def log_in(email: str, password: str) -> str:
                       data={'email': email, 'password': password})
     assert r.json() == {"email": email, "message": "logged in"}
     assert r.status_code == 200
-    return r.cookies.get()
+    return r.cookies.get('session_id')
 
 
 def profile_unlogged() -> None:
