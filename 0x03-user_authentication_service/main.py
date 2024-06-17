@@ -22,7 +22,7 @@ def log_in_wrong_password(email: str, password: str) -> None:
 def log_in(email: str, password: str) -> str:
     """ Tests POST /sessions with the correct login details """
     r = requests.post('http://127.0.0.1:5000/sessions',
-                      data={})
+                      data={'email': email, })
 profile_unlogged() -> None
 profile_logged(session_id: str) -> None
 log_out(session_id: str) -> None
