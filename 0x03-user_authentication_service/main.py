@@ -64,7 +64,9 @@ def reset_password_token(email: str) -> str:
 def update_password(email: str, reset_token: str, new_password: str) -> None:
     """ Tests PUT /reset_password """
     r = requests.put('http://127.0.0.1:5000/reset_password',
-                     data={'email': email, 'reset_token': rese})
+                     data={'email': email, 'reset_token': reset_token,
+                           'new_password': new_password})
+    assert 
 
 
 EMAIL = "guillaume@holberton.io"
