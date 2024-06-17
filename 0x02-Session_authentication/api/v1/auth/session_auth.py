@@ -55,4 +55,6 @@ class SessionAuth(Auth):
             if session_id:
                 user_id = self.user_id_for_session_id(session_id)
                 if user_id:
-                    del self.
+                    del self.user_id_by_session_id[session_id]
+                    return True
+        return False
