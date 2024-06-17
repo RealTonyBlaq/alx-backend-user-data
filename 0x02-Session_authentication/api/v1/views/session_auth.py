@@ -44,4 +44,4 @@ def safe_login() -> str:
 @app_views.route('/api/v1/auth_session/logout', methods=['DELETE'],
                  strict_slashes=False)
 def safe_logout() -> str:
-    """ """
+    """ Dele"""
