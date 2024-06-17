@@ -62,6 +62,7 @@ def reset_password_token(email: str) -> str:
     user = db.find_user_by(email=email)
     assert r.json() == {"email": email, "reset_token": user.reset_token}
     assert r.status_code == 200
+    return user.reset_token
 
 
 def update_password(email: str, reset_token: str, new_password: str) -> None:
