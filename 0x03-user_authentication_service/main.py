@@ -52,7 +52,7 @@ def reset_password_token(email: str) -> str:
     """ Tests POST /reset_password """
     r = requests.post('http://127.0.0.1:5000/reset_password',
                       data={'email': email})
-    assert 
+    assert r.json() == {"email": email, "reset_token": token}
 update_password(email: str, reset_token: str, new_password: str) -> None
 
 
