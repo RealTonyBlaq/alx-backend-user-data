@@ -6,7 +6,8 @@ import requests
 
 def register_user(email: str, password: str) -> None:
     """ Tests POST /users endpoint """
-    r = requests.post('127.0.0.1:5000/users', params={'email': email, 'password':})
+    r = requests.post('127.0.0.1:5000/users',
+                      params={'email': email, 'password': password})
 log_in_wrong_password(email: str, password: str) -> None
 log_in(email: str, password: str) -> str
 profile_unlogged() -> None
