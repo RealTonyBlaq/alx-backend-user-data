@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """ Main file """
-from user import User
 
-register_user(email: str, password: str) -> None
+import requests
+
+
+def register_user(email: str, password: str) -> None:
+    """ Tests the """
 log_in_wrong_password(email: str, password: str) -> None
 log_in(email: str, password: str) -> str
 profile_unlogged() -> None
