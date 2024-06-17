@@ -5,7 +5,8 @@ import requests
 
 
 def register_user(email: str, password: str) -> None:
-    """ Tests the /users """
+    """ Tests POST /users endpoint """
+    r = requests.post
 log_in_wrong_password(email: str, password: str) -> None
 log_in(email: str, password: str) -> str
 profile_unlogged() -> None
