@@ -50,7 +50,8 @@ def log_out(session_id: str) -> None:
 
 def reset_password_token(email: str) -> str:
     """ Tests POST /reset_password """
-    r = requests.post()
+    r = requests.post('http://127.0.0.1:5000/reset_password',
+                      data={})
 update_password(email: str, reset_token: str, new_password: str) -> None
 
 
