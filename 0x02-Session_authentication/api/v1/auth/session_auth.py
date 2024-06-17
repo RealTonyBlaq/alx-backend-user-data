@@ -51,4 +51,6 @@ class SessionAuth(Auth):
         Otherwise, delete in self.user_id_by_session_id the Session ID (as key of this dictionary) and return True
         """
         if request:
-            session_id = self.
+            session_id = self.session_cookie(request)
+            if session_id:
+                
