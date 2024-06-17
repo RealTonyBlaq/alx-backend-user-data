@@ -45,4 +45,5 @@ def safe_login() -> str:
                  strict_slashes=False)
 def safe_logout() -> str:
     """ Deletes a User session and logs them out """
-    cookie = request.cookies.get('')
+    sess_name = os.getenv('SESSION_NAME')
+    cookie = request.cookies.get(sess_name)
