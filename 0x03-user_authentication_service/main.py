@@ -46,7 +46,10 @@ def log_out(session_id: str) -> None:
                         cookies={'session_id': session_id}, allow_redirects=True)
     assert r.json() == {"message": "Bienvenue"}
     assert r.status_code == 200
-reset_password_token(email: str) -> str
+
+
+def reset_password_token(email: str) -> str:
+    """ Tests POST /reset_password """
 update_password(email: str, reset_token: str, new_password: str) -> None
 
 
