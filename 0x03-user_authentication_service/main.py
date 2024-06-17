@@ -41,7 +41,8 @@ def profile_logged(session_id: str) -> None:
     """ Tests GET /profile with a session_id """
     r = requests.get('http://127.0.0.1:5000/profile',
                      cookies={'session_id': session_id})
-    
+    user = db.find_user_by(session_id=session_id)
+    assert r.json() == {"email": user.email}
     assert r.status_code == 200
 
 
