@@ -58,8 +58,11 @@ def reset_password_token(email: str) -> str:
                       data={'email': email})
     user = db.find_user_by(email=email)
     assert r.json() == {"email": email, "reset_token": user.reset_token}
-    assert 
-update_password(email: str, reset_token: str, new_password: str) -> None
+    assert r.status_code == 200
+
+
+def update_password(email: str, reset_token: str, new_password: str) -> None:
+    """ Tests PUT /reset_password """
 
 
 EMAIL = "guillaume@holberton.io"
