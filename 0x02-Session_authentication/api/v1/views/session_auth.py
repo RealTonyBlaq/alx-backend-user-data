@@ -47,3 +47,5 @@ def safe_logout() -> str:
     """ Deletes a User session and logs them out """
     sess_name = os.getenv('SESSION_NAME')
     cookie = request.cookies.get(sess_name)
+    if cookie:
+        
