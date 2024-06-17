@@ -6,7 +6,7 @@ import requests
 
 def register_user(email: str, password: str) -> None:
     """ Tests POST /users endpoint """
-    r = requests.post('127.0.0.1:5000/users',
+    r = requests.post('http://127.0.0.1:5000/users',
                       params={'email': email, 'password': password})
     assert r.json() == {"email": email, "message": "user created"}
     assert r.status_code == 200
@@ -22,7 +22,7 @@ def log_in_wrong_password(email: str, password: str) -> None:
 def log_in(email: str, password: str) -> str:
     """ Tests POST /sessions with the correct login details """
     r = requests.post('http://127.0.0.1:5000/sessions',
-                      )
+                      params)
 profile_unlogged() -> None
 profile_logged(session_id: str) -> None
 log_out(session_id: str) -> None
