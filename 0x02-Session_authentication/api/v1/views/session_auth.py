@@ -39,3 +39,6 @@ def safe_login() -> str:
     response.set_cookie(key=sess_name, value=session_id)
 
     return response
+
+
+@app_views.route('/api/v1/auth_session/logout')
