@@ -48,4 +48,4 @@ def safe_logout() -> str:
     sess_name = os.getenv('SESSION_NAME')
     cookie = request.cookies.get(sess_name)
     if cookie:
-        
+        from 
