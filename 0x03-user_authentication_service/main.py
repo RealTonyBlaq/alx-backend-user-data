@@ -44,7 +44,8 @@ def log_out(session_id: str) -> None:
     """ Tests DELETE /sessions """
     r = requests.delete('http://127.0.0.1:5000/sessions',
                         cookies={'session_id': session_id}, allow_redirects=True)
-    assert 
+    assert r.json() == {"message": "Bienvenue"}
+    assert r.status_code == 200
 reset_password_token(email: str) -> str
 update_password(email: str, reset_token: str, new_password: str) -> None
 
