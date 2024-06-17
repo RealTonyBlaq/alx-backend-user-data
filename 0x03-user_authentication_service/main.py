@@ -37,7 +37,7 @@ def profile_logged(session_id: str) -> None:
     """ Tests GET /profile with a session_id """
     r = requests.get('http://127.0.0.1:5000/profile',
                      cookies={'session_id': session_id})
-    assert r.json() == 
+    assert r.json() == {"email": user.email}
 log_out(session_id: str) -> None
 reset_password_token(email: str) -> str
 update_password(email: str, reset_token: str, new_password: str) -> None
