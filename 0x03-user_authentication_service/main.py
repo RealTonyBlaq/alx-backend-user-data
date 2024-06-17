@@ -28,7 +28,7 @@ def log_in(email: str, password: str) -> str:
 
 
 def profile_unlogged() -> None:
-    """ """
+    """ Tests GET """
 profile_logged(session_id: str) -> None
 log_out(session_id: str) -> None
 reset_password_token(email: str) -> str
