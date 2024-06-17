@@ -24,7 +24,11 @@ def log_in(email: str, password: str) -> str:
     r = requests.post('http://127.0.0.1:5000/sessions',
                       data={'email': email, 'password': password})
     assert r.json() == {"email": email, "message": "logged in"}
-profile_unlogged() -> None
+    assert r.status_code == 200
+
+
+def profile_unlogged() -> None:
+    """ """
 profile_logged(session_id: str) -> None
 log_out(session_id: str) -> None
 reset_password_token(email: str) -> str
