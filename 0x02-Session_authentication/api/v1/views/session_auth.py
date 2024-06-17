@@ -47,8 +47,7 @@ def safe_logout() -> str:
     """ Deletes a User session and logs them out """
     sess_name = os.getenv('SESSION_NAME')
     cookie = request.cookies.get(sess_name)
-    if cookie:
-        from api.v1.app import auth
-        if auth.destroy_session(request):
-            return jsonify({}), 200
+    from api.v1.app import auth
+    if auth.destroy_session(request):
+        return jsonify({}), 200
     abort(404)
