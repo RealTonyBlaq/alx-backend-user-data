@@ -33,5 +33,6 @@ class SessionExpAuth(SessionAuth):
                 if self.session_duration <= 0:
                     return user_session.get('user_id')
                 if user_session.get('created_at'):
-                    created_at = 
+                    created_at = timedelta()
         return None
+
