@@ -30,4 +30,4 @@ class SessionExpAuth(SessionAuth):
         if session_id:
             user_id = self.user_id_by_session_id.get(session_id)
             if user_id:
-                if 
+                if self.session_duration 
