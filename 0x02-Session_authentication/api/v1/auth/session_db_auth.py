@@ -34,4 +34,4 @@ class SessionDBAuth(SessionExpAuth):
             if session_id:
                 users = UserSession.search({'session_id': session_id})
                 for user in users:
-                    
+                    user.remove()
