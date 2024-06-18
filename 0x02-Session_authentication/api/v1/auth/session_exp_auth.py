@@ -20,4 +20,4 @@ class SessionExpAuth(SessionAuth):
         """ Creates a session, returns a session ID """
         session_id = super().create_session(user_id)
         if session_id:
-            
+            self.user_id_by_session_id[session_id] = {}
