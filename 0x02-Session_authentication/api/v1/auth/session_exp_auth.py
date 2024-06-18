@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ SesionExpAuth Module """
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from os import getenv
 from session_auth import SessionAuth
 
@@ -33,4 +33,5 @@ class SessionExpAuth(SessionAuth):
                 if self.session_duration <= 0:
                     return user_session.get('user_id')
                 if user_session.get('created_at'):
+                    
         return None
