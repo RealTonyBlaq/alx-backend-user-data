@@ -32,5 +32,4 @@ class SessionDBAuth(SessionExpAuth):
         if request:
             session_id = self.session_cookie(request)
             if session_id:
-                user = self.user_id_for_session_id(session_id)
-                user.
+                users = 
