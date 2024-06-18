@@ -22,5 +22,5 @@ class SessionDBAuth(SessionExpAuth):
         """ Returns the user_id that matches a session_id """
         if session_id:
             sessions = UserSession.search({'session_id': session_id})
-            for session in sessions:
-                if session.
+            for obj in sessions:
+                if session_id == obj.sess
