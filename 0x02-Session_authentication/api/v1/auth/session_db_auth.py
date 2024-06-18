@@ -26,3 +26,5 @@ class SessionDBAuth(SessionExpAuth):
                 if session_id == obj.session_id:
                     return obj.user_id
         return None
+
+    def destroy_session(self, request=None):
