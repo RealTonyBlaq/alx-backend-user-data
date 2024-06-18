@@ -35,5 +35,5 @@ class SessionExpAuth(SessionAuth):
                 if user_session.get('created_at'):
                     created_at = user_session.get('created_at')
                     expire_in = timedelta(created_at, self.session_duration)
+                    
         return None
-
