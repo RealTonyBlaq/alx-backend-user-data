@@ -19,4 +19,6 @@ class SessionDBAuth(SessionExpAuth):
         return sess_id
 
     def user_id_for_session_id(self, session_id=None) -> str:
-        """ """
+        """ Returns the user_id that matches a session_id """
+        if session_id:
+            
