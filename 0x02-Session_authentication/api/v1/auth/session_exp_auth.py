@@ -21,7 +21,9 @@ class SessionExpAuth(SessionAuth):
         """ Creates a session, returns a session ID """
         session_id = super().create_session(user_id)
         if session_id:
-            self.user_id_by_session_id[session_id] = {'user_id': user_id, 'created_at': datetime.now()}
+            self.user_id_by_session_id[session_id] = {
+                'user_id': user_id,
+                'created_at': datetime.now()}
             return session_id
         return None
 
@@ -36,7 +38,8 @@ class SessionExpAuth(SessionAuth):
                 if 'created_at' in user_session:
                     created_at = user_session.get('created_at')
                     current_time = datetime.now()
-                    if created_at + timedelta(seconds=self.session_duration) < current_time:
+                    if created_at + timedelta(
+                          seconds=self.session_duration) < current_time:
                         return None
-                    return user_session['user_id']      
+                    return user_session['user_id']
         return None
