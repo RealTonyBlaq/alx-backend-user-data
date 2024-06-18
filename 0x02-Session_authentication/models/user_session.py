@@ -10,5 +10,7 @@ class UserSession(Base):
     def __init__(self, *args: list, **kwargs: dict):
         """
         Initailize the attributes:
-        
+        user_id (str)
+        session_id(str)
         """
+        
