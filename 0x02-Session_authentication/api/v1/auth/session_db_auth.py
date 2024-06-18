@@ -32,4 +32,6 @@ class SessionDBAuth(SessionExpAuth):
         if request:
             session_id = self.session_cookie(request)
             if session_id:
-                users = UserSession.search({session_id'})
+                users = UserSession.search({'session_id': session_id})
+                for user in users:
+                    
