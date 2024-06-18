@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
 """ SesionExpAuth Module """
 
-from sessi
+from session_auth import SessionAuth
+
+
+class SessionExpAuth(SessionAuth):
+    
