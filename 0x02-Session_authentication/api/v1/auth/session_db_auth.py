@@ -15,4 +15,4 @@ class SessionDBAuth(SessionExpAuth):
         """ Creates and stores a session_id """
         sess_id = super().create_session(user_id)
         user_session = UserSession(user_id=user_id, session_id=sess_id)
-        user_session.save_to_file()
+        user_session.save()
