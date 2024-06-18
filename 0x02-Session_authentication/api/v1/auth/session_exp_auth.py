@@ -3,7 +3,7 @@
 
 from datetime import datetime, timedelta
 from os import getenv
-from session_auth import SessionAuth
+from api.v1.auth.session_auth import SessionAuth
 
 
 class SessionExpAuth(SessionAuth):
