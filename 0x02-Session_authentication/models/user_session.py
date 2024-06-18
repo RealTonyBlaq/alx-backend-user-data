@@ -14,4 +14,5 @@ class UserSession(Base):
         session_id(str)
         """
         super().__init__(*args, **kwargs)
-        
+        self.user_id = kwargs.get('user_id')
+        self.
