@@ -12,6 +12,9 @@ class SessionExpAuth(SessionAuth):
         """ Initializing the attributes """
         super().__init__()
         try:
-            self.session_duration = int(getenv('SESSION_DURATION')
+            self.session_duration = int(getenv('SESSION_DURATION'))
         except ValueError:
             self.session_duration = 0
+
+    def create_session(self, user_id=None):
+        """ Creates a """
