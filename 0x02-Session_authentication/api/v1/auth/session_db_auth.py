@@ -18,4 +18,5 @@ class SessionDBAuth(SessionExpAuth):
         user_session.save()
         return sess_id
 
-    
+    def user_id_for_session_id(self, session_id=None) -> str:
+        """ """
