@@ -5,4 +5,6 @@ from session_auth import SessionAuth
 
 
 class SessionExpAuth(SessionAuth):
+    """ Defining the SessionExpAuth model """
+
     
