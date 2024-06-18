@@ -4,4 +4,6 @@
 from api.v1.auth.session_exp_auth import SessionExpAuth
 
 
-
+class SessionDBAuth(SessionExpAuth):
+    """ Defining the new SessionSBAuth system that stores
+    """
