@@ -24,5 +24,5 @@ class SessionDBAuth(SessionExpAuth):
             sessions = UserSession.search({'session_id': session_id})
             for obj in sessions:
                 if session_id == obj.session_id:
-                    return obj.id
-        
+                    return obj.user_id
+        return None
