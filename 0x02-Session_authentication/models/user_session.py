@@ -4,4 +4,5 @@
 from models.base import Base
 
 
-class UserSession()
+class UserSession(Base):
+    """ Defining the User"""
