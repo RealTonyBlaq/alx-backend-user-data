@@ -28,3 +28,5 @@ class SessionDBAuth(SessionExpAuth):
         return None
 
     def destroy_session(self, request=None) -> None:
+        """ """
+    
