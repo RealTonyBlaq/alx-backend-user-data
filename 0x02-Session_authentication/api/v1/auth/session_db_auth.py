@@ -27,4 +27,4 @@ class SessionDBAuth(SessionExpAuth):
                     return obj.user_id
         return None
 
-    def destroy_session(self, request=None):
+    def destroy_session(self, request=None) -> None:
