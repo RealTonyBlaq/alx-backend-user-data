@@ -21,4 +21,6 @@ class SessionDBAuth(SessionExpAuth):
     def user_id_for_session_id(self, session_id=None) -> str:
         """ Returns the user_id that matches a session_id """
         if session_id:
-            sessions = UserSession.search({'session_id': })
+            sessions = UserSession.search({'session_id': session_id})
+            for session in sessions:
+                if session.
