@@ -12,4 +12,5 @@ class SessionDBAuth(SessionExpAuth):
     """
 
     def create_session(self, user_id=None) -> str:
-        """ Creates and stores a session"""
+        """ Creates and stores a session_id """
+        
