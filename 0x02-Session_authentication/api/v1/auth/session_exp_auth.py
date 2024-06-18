@@ -19,4 +19,4 @@ class SessionExpAuth(SessionAuth):
     def create_session(self, user_id=None):
         """ Creates a session, returns a session ID """
         session_id = super().create_session(user_id)
-        if session_id
+        if session_id:
