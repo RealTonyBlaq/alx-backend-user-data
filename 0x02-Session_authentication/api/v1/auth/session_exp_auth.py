@@ -29,4 +29,5 @@ class SessionExpAuth(SessionAuth):
         """ Returns the user_id that matches a session_id """
         if session_id:
             user_id = self.user_id_by_session_id.get(session_id)
-            
+            if user_id:
+                if 
