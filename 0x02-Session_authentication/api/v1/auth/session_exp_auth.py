@@ -18,3 +18,4 @@ class SessionExpAuth(SessionAuth):
 
     def create_session(self, user_id=None):
         """ Creates a session, returns a session ID """
+        session
