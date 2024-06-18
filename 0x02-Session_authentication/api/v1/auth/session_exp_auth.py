@@ -31,4 +31,5 @@ class SessionExpAuth(SessionAuth):
             user_session = self.user_id_by_session_id.get(session_id)
             if user_session:
                 if self.session_duration <= 0:
-                    return 
+                    return user_session.get('user_id')
+        return None
