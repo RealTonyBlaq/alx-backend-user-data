@@ -2,6 +2,7 @@
 """ SesionExpAuth Module """
 
 from session_auth import SessionAuth
+from
 
 
 class SessionExpAuth(SessionAuth):
@@ -10,3 +11,4 @@ class SessionExpAuth(SessionAuth):
     def __init__(self) -> None:
         """ Initializing the attributes """
         super().__init__()
+        
