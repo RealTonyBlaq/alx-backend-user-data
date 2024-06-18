@@ -29,4 +29,5 @@ class SessionDBAuth(SessionExpAuth):
 
     def destroy_session(self, request=None) -> None:
         """ Deletes a user session """
+        session_id = self.session_cookie(request)
         
