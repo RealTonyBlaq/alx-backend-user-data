@@ -13,4 +13,5 @@ class UserSession(Base):
         user_id (str)
         session_id(str)
         """
-        super()
+        super().__init__(*args, **kwargs)
+        
