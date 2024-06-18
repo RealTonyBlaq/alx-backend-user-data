@@ -11,4 +11,5 @@ class SessionDBAuth(SessionExpAuth):
     session_ids to the database.
     """
 
-    def 
+    def create_session(self, user_id=None) -> str:
+        """ Creates and stores a session"""
