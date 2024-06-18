@@ -32,8 +32,9 @@ class SessionExpAuth(SessionAuth):
             if user_session:
                 if self.session_duration <= 0:
                     return user_session.get('user_id')
-                if 'created_at' not in session_id:
+                if 'created_at' in user_session:
                     created_at = user_session.get('created_at')
+                    current_time = datetime.now()
                     expire_in = timedelta(created_at, self.session_duration)
                     
         return None
