@@ -5,4 +5,6 @@ from models.base import Base
 
 
 class UserSession(Base):
-    """ Defining the User"""
+    """ Defining the UserSession Auth system """
+
+    
