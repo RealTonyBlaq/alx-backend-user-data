@@ -11,4 +11,7 @@ class SessionExpAuth(SessionAuth):
     def __init__(self) -> None:
         """ Initializing the attributes """
         super().__init__()
-        self.session_duration = getenv()
+        try:
+            self.session_duration = int(getenv('SESSION_DURATION')
+        except ValueError:
+            self.session_duration = 0
