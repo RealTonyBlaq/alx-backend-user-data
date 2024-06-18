@@ -35,3 +35,4 @@ class SessionDBAuth(SessionExpAuth):
                 users = UserSession.search({'session_id': session_id})
                 for user in users:
                     user.remove()
+        return None
