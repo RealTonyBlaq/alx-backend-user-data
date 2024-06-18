@@ -23,4 +23,6 @@ class SessionDBAuth(SessionExpAuth):
         if session_id:
             sessions = UserSession.search({'session_id': session_id})
             for obj in sessions:
-                if session_id == obj.sess
+                if session_id == obj.session_id:
+                    return obj.id
+        
