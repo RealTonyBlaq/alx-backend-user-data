@@ -20,12 +20,7 @@ class SessionDBAuth(SessionExpAuth):
 
     def user_id_for_session_id(self, session_id=None) -> str:
         """ Returns the user_id that matches a session_id """
-        if session_id:
-            sessions = UserSession.search({'session_id': session_id})
-            for obj in sessions:
-                if session_id == obj.session_id:
-                    return obj.user_id
-        return None
+        return super().user_id_for_session_id(session_id)
 
     def destroy_session(self, request=None) -> None:
         """ Deletes a user session """
