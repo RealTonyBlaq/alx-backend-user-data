@@ -5,7 +5,7 @@ from typing import List
 import re
 
 
-def filter_datum(fields: List[str, str], rplc: str, msg: str, sp: str) -> str:
+def filter_datum(fields: List[str], rplc: str, msg: str, sp: str) -> str:
     """ Returns the log message obfuscated """
     for field in fields:
         msg = re.sub(fr'({field}=)[^{re.escape(sp)}]+({re.escape(sp)})',
