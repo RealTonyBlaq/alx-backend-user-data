@@ -5,6 +5,8 @@ from typing import List
 import re
 
 
-def filter_datum(fields: List[str], redaction: str, messsage: str, separator: str) -> str:
+def filter_datum(fields: List[str, str], rplc: str, msg: str, sp: str) -> str:
     """ Returns the log message obfuscated """
-    return re.sub(f'({"|".join(fields)})=[^{separator}]*', f'\\1={redaction}', messsage)
+    for field in fields:
+        msg = re.sub(fr'({field}=)[^{sp}]+({re.escape(sp)})', fr'\1{rplc}\2', msg)
+    return msg
