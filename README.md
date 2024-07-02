@@ -1,3 +1,5 @@
 ## Alx Backend - User data, Security, Authentication.
 
-This repository dives deep into Authentication systems, 
+This repository dives deep into Authentication systems, Data security and Sessions management.
+
+
