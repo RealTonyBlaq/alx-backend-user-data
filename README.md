@@ -20,6 +20,8 @@ This repository dives deep into Authentication systems, Data security and Sessio
 
     What authentication means
     What session authentication means
-What Cookies are
-How to send Cookies
-How to parse Cookies
+    What Cookies are
+    How to send Cookies
+    How to parse Cookies
+
+## `
