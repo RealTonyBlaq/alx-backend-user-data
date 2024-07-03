@@ -9,4 +9,10 @@ This repository dives deep into Authentication systems, Data security and Sessio
     How to encrypt a password and check the validity of an input password
     How to authenticate to a database using environment variables
 
-## `
+## `0x01. Basic Authentication`
+
+    What authentication means
+    What Base64 is
+    How to encode a string in Base64
+    What Basic authentication means
+    How to send the Authorization header
