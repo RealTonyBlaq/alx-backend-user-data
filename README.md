@@ -12,7 +12,8 @@ This repository dives deep into Authentication systems, Data security and Sessio
 ## `0x01. Basic Authentication`
 
     What authentication means
-    What Base64 is
-    How to encode a string in Base64
+    What Base64 is and how to encode/decode a string in Base64
     What Basic authentication means
     How to send the Authorization header
+
+## `0x02
