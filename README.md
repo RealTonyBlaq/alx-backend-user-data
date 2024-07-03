@@ -16,4 +16,10 @@ This repository dives deep into Authentication systems, Data security and Sessio
     What Basic authentication means
     How to send the Authorization header
 
-## `0x02
+## `0x02. Session Authentication`
+
+    What authentication means
+    What session authentication means
+What Cookies are
+How to send Cookies
+How to parse Cookies
