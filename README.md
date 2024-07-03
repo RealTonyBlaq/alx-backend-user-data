@@ -30,4 +30,4 @@ This repository dives deep into Authentication systems, Data security and Sessio
     How to get and set cookies
     How to retrieve request form data
     How to return various HTTP status codes
-    How to manage User authentication, set expiration to cookies
+    How to manage User authentication, set how long cookies last
