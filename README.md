@@ -26,4 +26,8 @@ This repository dives deep into Authentication systems, Data security and Sessio
 
 ## `0x03. User Authentication Service`
 
-    
+    How to declare API routes in a Flask app
+    How to get and set cookies
+    How to retrieve request form data
+    How to return various HTTP status codes
+    How to manage use
