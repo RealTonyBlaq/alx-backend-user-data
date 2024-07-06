@@ -28,14 +28,14 @@ class SessionDBAuth(SessionExpAuth):
                 return None
 
             user = users[0]
-            duration = getenv('SESSION_DURATION')
+            duration = int(getenv('SESSION_DURATION'))
             current_time = datetime.now()
 
             if duration is None or duration <= 0:
                 return user.user_id
-            if current_time > user.created_at + timedelta(seconds=duration):
-                return None
-            return user.user_id
+            if (user.created_at + timedelta(seconds=duration)) < current_time:
+                return user.user_id
+            return None
 
     def destroy_session(self, request=None) -> None:
         """ Deletes a user session """
