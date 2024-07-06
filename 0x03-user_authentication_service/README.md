@@ -1,2 +1,1 @@
 ## User Authentication Service
-`Backend`
